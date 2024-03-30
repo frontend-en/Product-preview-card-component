@@ -8,18 +8,32 @@
   <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Blog preview card</title>
 </head>
-
 <body>
   <main>
-    <article>
-      <div class="card">
-        <img src="./assets/images/image-omelette.jpeg" class="card__dish" alt="omelette picture" />
-        <div class="card__content">
-          <img data-src="@img" alt="">
+    <article class="card">
+      <div class="card__content">
+        <picture class="card__images">
+          <source srcset="./assets/images/image-product-desktop.jpg" media="(min-width: 40em)" width="300" height="450">
+          <source srcset="./assets/images/image-product-mobile.jpg" width="343" height="240">
+          <img src=./assets/images/image-product-mobile.jpg" alt="perfume Gabrielle Essence Eau De Parfum picture" width="343" height="240">
+        </picture>
+        <div class="card__body">
+          <p class="card__category">perfume</p>
+          <h1 class="card__title">Gabrielle Essence Eau De Parfum</h1>
+          <p class="card__subtitle">
+            A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="card__price">
+            <div class="card__current-price">$149.99</div>
+            <div class="card__last-price">$169.99</div>
+          </div>
+          <button class="card__add-to-card">
+            <img class="card__icon" src='./assets/images/icon-cart.svg'" alt="">
+              <span class=" card__button-text">Add to Cart</span>
+          </button>
         </div>
       </div>
     </article>
   </main>
 </body>
-
 </html>
