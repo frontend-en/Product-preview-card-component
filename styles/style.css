@@ -72,6 +72,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
+  max-inline-size: 100%;
   display: block;
 }
 
@@ -150,34 +151,55 @@ main {
 @media (min-width: 40em) {
   .card__body {
     border-radius: 0 10px 10px 0;
+    padding: 2rem;
   }
 }
 .card__category {
-  margin-bottom: clamp(0.75rem, 0.5739rem + 0.7512vi, 1.25rem);
+  margin-bottom: 0.75rem;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.42em;
   color: hsl(228, 12%, 48%);
+  line-height: 100%;
+}
+@media (min-width: 40em) {
+  .card__category {
+    margin-bottom: 1.25rem;
+  }
 }
 .card__title {
-  margin-bottom: clamp(1rem, 0.8239rem + 0.7512vi, 1.5rem);
+  margin-bottom: 1rem;
   font-family: "Fraunces Bold";
   font-size: 2rem;
   line-height: 100%;
   color: hsl(212, 21%, 14%);
-  padding-right: 0.75rem;
+}
+@media (min-width: 40em) {
+  .card__title {
+    margin-bottom: 1.5rem;
+  }
 }
 .card__subtitle {
-  padding-bottom: clamp(1.5rem, 1.39rem + 0.4695vi, 1.8125rem);
+  margin-bottom: 1.5rem;
   font-size: 0.875rem;
   line-height: 164%;
   color: hsl(228, 12%, 48%);
 }
+@media (min-width: 40em) {
+  .card__subtitle {
+    margin-bottom: 1.8125rem;
+  }
+}
 .card__price {
-  margin-bottom: clamp(1.3125rem, 1.1144rem + 0.8451vi, 1.875rem);
+  margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
   gap: 1.1875rem;
+}
+@media (min-width: 40em) {
+  .card__price {
+    margin-bottom: 1.875rem;
+  }
 }
 .card__current-price {
   color: hsl(158, 36%, 37%);
@@ -199,6 +221,12 @@ main {
   border-radius: 0.5rem;
   padding: 0.9375rem;
   background-color: hsl(158, 36%, 37%);
+  line-height: 100%;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out 0s;
+}
+.card__add-to-card:hover {
+  background-color: hsl(157, 43%, 17%);
 }
 .card__icon {
   margin-right: 0.725625rem;
